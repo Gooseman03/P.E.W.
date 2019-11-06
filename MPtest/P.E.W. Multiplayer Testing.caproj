@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>P.E.W. Multiplayer Testing</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2gud4n5y6fw4o</unique-id>
+    <saved-with-version>19000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Multiplayer" sid="8793032795814239">
+            <plugin id="Multiplayer" />
+        </object-type>
+        <object-type name="MainTxt" sid="6488725098479589">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Name" sid="2051991303445709">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Keyboard" sid="8661806851216536">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="8011253669732369">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Join" sid="7052574811173864">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Text" sid="1965783710860431">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Seeker" sid="6009343635477254">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Seekpeerid" sid="2657036624321417" type="string" />
+                <instance-variable name="SeekLookx" sid="9483572474403511" type="number" />
+                <instance-variable name="SeekLooky" sid="8380228129819068" type="number" />
+                <instance-variable name="SeekInputs" sid="5436640078707823" type="number" />
+                <instance-variable name="Throw" sid="2374818377345251" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="1568059790021559">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="6226534675958904">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="8294575411915379">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="7248063692748007">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="2742903204839182">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9958827624433061" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Hider" sid="3407623164216043">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="hidID" sid="1730750696354476" type="string" />
+                <instance-variable name="hidLookx" sid="4018137053070966" type="number" />
+                <instance-variable name="hidLooky" sid="5209988714482898" type="number" />
+                <instance-variable name="HidHealth" sid="3099950229925403" type="number" />
+                <instance-variable name="HidInputs" sid="2674173490897957" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="6707593453648024">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="4169498645046588">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="7537195318259279">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="1455328647595876">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5179290764297613" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Egg" sid="1620672195845326">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="8323453146670361">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="6651765133516337">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2671777511199809" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SeekerName" sid="4418111984315882">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="HiderName" sid="727303758576321">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>MainMenu.xml</layout>
+        <layout>Game.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>MMEvent.xml</event-sheet>
+        <event-sheet>GameSheet.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Multiplayer" uid="0" />
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
