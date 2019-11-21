@@ -17,6 +17,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
         <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>
@@ -138,9 +139,19 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5179290764297613" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
+                <animation-folder name="Walking">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5179290764297613" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+                <animation-folder name="Prop">
+                    <animation framecount="1" loop="0" name="Prop1" pingpong="0" repeatcount="1" repeatto="0" sid="7689004532443256" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="5428840949943159" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </animation-folder>
         </object-type>
         <object-type name="Egg" sid="1620672195845326">
@@ -168,7 +179,7 @@
         <object-type name="ShadowLight" sid="4455908118595567">
             <plugin id="shadowlight" />
         </object-type>
-        <object-type name="Sprite" sid="8304980304966048">
+        <object-type name="Wall" sid="8304980304966048">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="8636509651347688">
@@ -183,6 +194,20 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="PropTest" sid="3844895275912854">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7607682470417703" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Health" sid="8599099083226434">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="HP" sid="6668555026154566">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />

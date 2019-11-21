@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="GAME" sid="8399822424580422" static="0" type="text">PEW-MHS</variable>
         <variable constant="0" name="ROOM" sid="3407956745405482" static="0" type="text">HidandSeek</variable>
-        <variable constant="0" name="INSTANCE" sid="9894968676751812" static="0" type="text">Wow</variable>
+        <variable constant="0" name="INSTANCE" sid="9894968676751812" static="0" type="text">oops</variable>
         <event-block sid="6585082919601146">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="1305458336297992" type="System" />
@@ -120,11 +120,13 @@
                             <param id="0" name="State">1</param>
                         </action>
                         <action id="-9" name="Destroy" sid="4784847900133345" type="ShadowLight" />
+                        <action id="-9" name="Destroy" sid="8528826396664023" type="Health" />
                         <action id="0" name="Spawn another object" sid="6908288501300969" type="Seeker">
                             <param id="0" name="Object">ShadowLight</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="4155631577773235" type="HP" />
                     </actions>
                 </event-block>
                 <event-block sid="1086301671142184">
@@ -315,19 +317,29 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="3672137661235335">
+                                <event-block sid="3646534582700078">
                                     <conditions>
-                                        <condition id="0" name="On key pressed" sid="2459609409202052" type="Keyboard">
-                                            <param id="0" name="Key">32 (Space)</param>
+                                        <condition id="-6" name="Every X seconds" sid="3270140658819401" type="System">
+                                            <param id="0" name="Interval (seconds)">0.25</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Spawn another object" sid="5672378162149161" type="Seeker">
-                                            <param id="0" name="Object">Egg</param>
-                                            <param id="1" name="Layer">1</param>
-                                            <param id="2" name="Image point">1</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="3672137661235335">
+                                            <conditions>
+                                                <condition id="2" name="Mouse button is down" sid="2459609409202052" type="Mouse">
+                                                    <param id="0" name="Mouse button">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="5672378162149161" type="Seeker">
+                                                    <param id="0" name="Object">Egg</param>
+                                                    <param id="1" name="Layer">1</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -351,6 +363,52 @@
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="9295018869749398">
+                                    <conditions>
+                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="7288601183036856" type="Seeker">
+                                            <param id="0" name="Object">PropTest</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="7636242337425311" type="PropTest">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9870576508616761">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4635169471176136" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="6062068152486819" type="PropTest">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1658672146627678">
+                                    <conditions>
+                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="1077448733536159" type="Seeker">
+                                            <param id="0" name="Object">Hider</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="8561469945491727" type="Hider">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6180320108058159">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4072164617297606" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="6281643882102183" type="Hider">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -385,6 +443,74 @@
                                         </action>
                                         <action behavior="ScrollTo" id="1" name="Set enabled" sid="3950250194542822" type="Hider">
                                             <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8978671281127328">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6358673285599018" type="Hider">
+                                    <param id="0" name="Instance variable">hidID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Multiplayer.MyID</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8467868542486641">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="9074971951338317" type="System">
+                                            <param id="0" name="First value">getbit(Hider.HidInputs, 0)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="2518105566713892" type="Hider">
+                                            <param id="0" name="Control">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5234275091090885">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="5945948018592712" type="System">
+                                            <param id="0" name="First value">getbit(Hider.HidInputs, 1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="4770302345076087" type="Hider">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3823229112734369">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="6854493126370342" type="System">
+                                            <param id="0" name="First value">getbit(Hider.HidInputs, 2)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="7907334616305193" type="Hider">
+                                            <param id="0" name="Control">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3536158323920559">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="9585019951473484" type="System">
+                                            <param id="0" name="First value">getbit(Hider.HidInputs, 3)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="4906553650284845" type="Hider">
+                                            <param id="0" name="Control">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -521,71 +647,21 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="8978671281127328">
+                        <event-block sid="5862073324771024">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="6358673285599018" type="Hider">
-                                    <param id="0" name="Instance variable">hidID</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Multiplayer.MyID</param>
+                                <condition id="0" name="On key pressed" sid="7041967728450705" type="Keyboard">
+                                    <param id="0" name="Key">69 (E)</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="8467868542486641">
+                                <event-block sid="1331321085283178">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="9074971951338317" type="System">
-                                            <param id="0" name="First value">getbit(Hider.HidInputs, 0)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">1</param>
+                                        <condition id="1" name="Is overlapping another object" sid="4031953600831311" type="Hider">
+                                            <param id="0" name="Object">PropTest</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="2518105566713892" type="Hider">
-                                            <param id="0" name="Control">2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="5234275091090885">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="5945948018592712" type="System">
-                                            <param id="0" name="First value">getbit(Hider.HidInputs, 1)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="4770302345076087" type="Hider">
-                                            <param id="0" name="Control">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="3823229112734369">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="6854493126370342" type="System">
-                                            <param id="0" name="First value">getbit(Hider.HidInputs, 2)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="7907334616305193" type="Hider">
-                                            <param id="0" name="Control">3</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="3536158323920559">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="9585019951473484" type="System">
-                                            <param id="0" name="First value">getbit(Hider.HidInputs, 3)</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="4906553650284845" type="Hider">
-                                            <param id="0" name="Control">1</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                 </event-block>
                             </sub-events>
                         </event-block>
