@@ -11,9 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>MainMenu</layout>
-        <layout>Game</layout>
+        <layout active="1">Game</layout>
         <event-sheet>MMEvent</event-sheet>
-        <event-sheet active="1">GameSheet</event-sheet>
+        <event-sheet>GameSheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -37,5 +37,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Egg/" />
         <folder expanded="1" path="animation-folder/Wall/" />
         <folder expanded="1" path="animation-folder/PropTest/" />
+        <folder expanded="1" path="animation-folder/PropTest2/" />
     </folders-expanded>
 </c2uistate>
