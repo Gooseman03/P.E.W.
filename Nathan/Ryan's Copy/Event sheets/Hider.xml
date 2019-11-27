@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Hider</name>
+    <events>
+        <event-block sid="468330570928596">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="8622778716120002" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="5938666931737414" type="Hider">
+                    <param id="0" name="Instance variable">hidID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Multiplayer.MyID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set progress" sid="1633980114804644" type="ProgressBar">
+                    <param id="0" name="Value">Hider.HidHealth</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>P.E.W. Multiplayer Testing</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2gud4n5y6fw4o</unique-id>
+    <saved-with-version>19000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
+        <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1080</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Multiplayer" sid="8793032795814239">
+            <plugin id="Multiplayer" />
+        </object-type>
+        <object-type name="MainTxt" sid="6488725098479589">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Name" sid="2051991303445709">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Keyboard" sid="8661806851216536">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="8011253669732369">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Join" sid="7052574811173864">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Text" sid="1965783710860431">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Seeker" sid="6009343635477254">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Seekpeerid" sid="2657036624321417" type="string" />
+                <instance-variable name="SeekInputs" sid="5436640078707823" type="number" />
+                <instance-variable name="Throw" sid="2374818377345251" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="6226534675958904">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="8294575411915379">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="7248063692748007">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="3762914138161548">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="9733158767183652">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9958827624433061" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="1" y="0.5" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Hider" sid="3407623164216043">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="hidID" sid="1730750696354476" type="string" />
+                <instance-variable name="HidHealth" sid="3099950229925403" type="number" />
+                <instance-variable name="HidInputs" sid="2674173490897957" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="4169498645046588">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="7537195318259279">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="1455328647595876">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="2081172315422588">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5179290764297613" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Egg" sid="1620672195845326">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="8323453146670361">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="6651765133516337">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="5964634197540533">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2671777511199809" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SeekerName" sid="4418111984315882">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="HiderName" sid="727303758576321">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ProgressBar" sid="1687895632622393">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="TiledBackground" sid="615632512836111">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\nm259002700\Downloads\map2.png" />
+        </object-type>
+        <object-type name="Sprite" sid="3527586754627769">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="6039409286314225">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="ShadowCaster" sid="1134276052404217">
+                    <behavior id="shadowcaster" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="312740436446392" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ShadowLight" sid="6991742927824318">
+            <plugin id="shadowlight" />
+        </object-type>
+        <object-type name="Sprite2" sid="8342202418488443">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1464297931911795" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.292" y="0.208" />
+                            <point x="0.324" y="0.216" />
+                            <point x="0.248" y="0.784" />
+                            <point x="0.738" y="0.840001" />
+                            <point x="0.807" y="0.36" />
+                            <point x="0.411812" y="0.6645" />
+                            <point x="0.618219" y="0.64875" />
+                            <point x="0.636625" y="0.697" />
+                            <point x="0.37825" y="0.69" />
+                            <point x="0.385874" y="0.267" />
+                            <point x="0.5095" y="0.272" />
+                            <point x="0.521124" y="0.482" />
+                            <point x="0.77275" y="0.288" />
+                            <point x="0.828" y="0.312" />
+                            <point x="0.834" y="0.612" />
+                            <point x="0.764" y="0.852" />
+                            <point x="0.624" y="0.838" />
+                            <point x="0.5" y="0.832" />
+                            <point x="0.224" y="0.776" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="5818599273240479">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8650277939610143" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nuker\Downloads\asdf.png">
+                        <collision-poly>
+                            <point x="0.00104167" y="0.00185185" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>MainMenu.xml</layout>
+        <layout>Game.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>MMEvent.xml</event-sheet>
+        <event-sheet>GameSheet.xml</event-sheet>
+        <event-sheet>Hider.xml</event-sheet>
+        <event-sheet>Line of sight.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Multiplayer" uid="0" />
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
