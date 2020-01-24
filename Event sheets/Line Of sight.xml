@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Line Of sight</name>
+    <events>
+        <event-block sid="4767572854195984">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9804240683657883" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2765182497347088">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7285141115003073" type="System">
+                            <param id="0" name="Variable">Player</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Seeker&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1034447038719479">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="5938159058398745" type="Character">
+                                    <param id="0" name="Object">Character</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="3471535096658772" type="Character">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2037241380385942">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="5737794343785139" type="Character">
+                                    <param id="0" name="Object">Character</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9277451810393919">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="7898851829804498" type="Character">
+                                            <param id="0" name="Instance variable">Role</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="1612228051337624" type="Character">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2543790623678063">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="6074619100009142" type="Character">
+                                    <param id="0" name="Object">Prop</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="8038616822425247" type="Prop">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8469490049736401">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="6936673971101901" type="Character">
+                                    <param id="0" name="Object">Prop</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="4896707523125529" type="Prop">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7376324353351234">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="3158859253350266" type="Character">
+                                    <param id="0" name="Object">Egg</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="2740612746806548" type="Egg">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9428844348290464">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="9086349731242945" type="Character">
+                                    <param id="0" name="Object">Egg</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="5394587081684996" type="Egg">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

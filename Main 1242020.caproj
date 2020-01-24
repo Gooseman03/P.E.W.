@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Main 1242020</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2gud4n5y6fw4o</unique-id>
+    <saved-with-version>19000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
+        <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>2000</width>
+        <height>1120</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>MainMenu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Entire Projects">
+            <object-type name="Browser" sid="8613507880820719">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Function" sid="7324702549291202">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Keyboard" sid="8661806851216536">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Mouse" sid="8011253669732369">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type global="1" name="Array" sid="3039028522761544">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="Multiplayer" sid="8793032795814239">
+                <plugin id="Multiplayer" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Text Bars">
+            <object-type name="DeathText" sid="4418111984315882">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Easter" sid="7515767950005434">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="Debug" sid="727303758576321">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Interactables">
+            <object-type name="Character" sid="6009343635477254">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="ID" sid="2657036624321417" type="string" />
+                    <instance-variable name="Inputs" sid="5436640078707823" type="number" />
+                    <instance-variable name="Throw" sid="2374818377345251" type="boolean" />
+                    <instance-variable name="Character" sid="1322900713474461" type="number" />
+                    <instance-variable name="Health" sid="582829093248503" type="number" />
+                    <instance-variable name="Lock" sid="7322420779267516" type="boolean" />
+                    <instance-variable name="Role" sid="1322486551755673" type="number" />
+                    <instance-variable name="MouseX" sid="9921391155871598" type="number" />
+                    <instance-variable name="MouseY" sid="6458514572884818" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="BoundToLayout" sid="6226534675958904">
+                        <behavior id="bound" />
+                    </behavior-type>
+                    <behavior-type name="8Direction" sid="8294575411915379">
+                        <behavior id="EightDir" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="7248063692748007">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="ScrollTo" sid="3762914138161548">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                    <behavior-type name="LineOfSight" sid="9733158767183652">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Start" pingpong="0" repeatcount="1" repeatto="0" sid="4541141300233023" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Seeker" pingpong="0" repeatcount="1" repeatto="0" sid="9958827624433061" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="1" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Hider" pingpong="0" repeatcount="1" repeatto="0" sid="8164929687313286" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Prop" pingpong="0" repeatcount="1" repeatto="0" sid="1929321107849661" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Debug" pingpong="0" repeatcount="1" repeatto="0" sid="3458939391669349" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nuker\Documents\GitHub\School\ArtWork\props\Debug.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="EasterWall" sid="2237205473896905">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="580155643033917" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Egg" sid="1620672195845326">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="8323453146670361">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="6651765133516337">
+                        <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="5964634197540533">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2671777511199809" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Prop" sid="447038116376007">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="PropNum" sid="5640336293089838" type="number" />
+                    <instance-variable name="PropID" sid="3514800926016729" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="3434248233833345">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Prop" pingpong="0" repeatcount="1" repeatto="0" sid="6386523025691377" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LineOfSightLight" sid="6991742927824318">
+                <plugin id="shadowlight" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Statics">
+            <object-type name="Walls" sid="3527586754627769">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="6039409286314225">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="ShadowCaster" sid="1134276052404217">
+                        <behavior id="shadowcaster" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="312740436446392" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="HealthBar" sid="1687895632622393">
+                <plugin id="progressbar" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Main Menu Objects">
+            <object-type name="Name" sid="2051991303445709">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="Hid" sid="4968692934789923">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="Seek" sid="7052574811173864">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="MainTxt" sid="6488725098479589">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>MainMenu.xml</layout>
+        <layout>Game.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-folder name="GameSheets">
+            <event-sheet>GameSheet.xml</event-sheet>
+            <event-sheet>Line Of sight.xml</event-sheet>
+            <event-sheet>Hider.xml</event-sheet>
+        </event-folder>
+        <event-folder name="MainMenu">
+            <event-sheet>MMEvent.xml</event-sheet>
+        </event-folder>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Multiplayer" uid="0" />
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Function" uid="8" />
+        <global-instance type="Browser" uid="59" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="Artwork sprites">
+            <file name="16 Bit5(1).png" />
+            <file name="16 Bit5(1)F.png" />
+            <file name="16 Bit5(2).png" />
+            <file name="16 Bit5.png" />
+            <file name="Debug.png" />
+            <file name="kazzoo.png" />
+            <file name="prop11.png" />
+            <file name="prop12.png" />
+            <file name="prop13.png" />
+            <file name="Props 5.png" />
+            <file name="Props 21.png" />
+            <file name="Props 22.png" />
+            <file name="Props 23.png" />
+            <file name="Props 24.png" />
+            <file name="Props 31.png" />
+            <file name="Props 32.png" />
+            <file name="Props 33.png" />
+            <file name="Props 34.png" />
+            <file name="Props 41.png" />
+            <file name="Props 42.png" />
+            <file name="Props 43.png" />
+            <file name="Props 44.png" />
+            <file name="Props 45.png" />
+            <file name="Props 46.png" />
+            <file name="Props 47.png" />
+            <file name="Props 48.png" />
+            <file name="Props 51.png" />
+            <file name="Props 52.png" />
+            <file name="Props 53.png" />
+            <file name="Props 54.png" />
+            <file name="Props 55.png" />
+            <file name="Character.xcf.png" />
+            <file name="Character1.xcf.png" />
+            <file name="Character2.xcf.png" />
+            <file name="Character3.xcf.png" />
+            <file name="Character4.xcf.png" />
+            <file name="flashlight.png" />
+            <file name="ok boomer 1.png" />
+            <file name="ok boomer 2.png" />
+            <file name="Untitled.png" />
+            <file name="Untitled2.png" />
+            <file name="Untitledback1.png" />
+            <file name="Untitledback2.png" />
+            <file name="Untitledleft1.png" />
+            <file name="Untitledleft2.png" />
+            <file name="Untitledright1.png" />
+            <file name="Untitledright2.png" />
+            <file name="Character1.xcf2.png" />
+            <file name="Character1egged.xcf.xcf" />
+            <file name="Character1walk1.xcf.png" />
+            <file name="Character1walk2.xcf.png" />
+            <file name="Character1walk3.xcf.png" />
+            <file name="Character1walk4.xcf.png" />
+            <file name="Character2.xcf2.png" />
+            <file name="Character2egged.xcf.png" />
+            <file name="Character2egged.xcf.xcf" />
+            <file name="Character3.xcf2.png" />
+            <file name="Character3egged.xcf.png" />
+            <file name="Character3egged.xcf.xcf" />
+            <file name="Character4 walk 1.xcf.png" />
+            <file name="Character4 walk 2.xcf.png" />
+            <file name="Character4 walk 3.xcf.png" />
+            <file name="Character4 walk 4.xcf.png" />
+            <file name="Character4.xcf2.png" />
+            <file name="Character4egged.xcf.png" />
+            <file name="Character4egged.xcf.xcf" />
+            <file name="Character.xcf2.png" />
+            <file name="Characteregged.xcf.png" />
+            <file name="Characteregged.xcf.xcf" />
+            <file name="Characterwalk1.xcf.png" />
+            <file name="Characterwalk2.xcf.png" />
+            <file name="Characterwalk3.xcf.png" />
+            <file name="Characterwalk4.xcf.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
