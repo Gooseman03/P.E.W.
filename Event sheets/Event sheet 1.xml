@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="2579770062637634">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1232386949405571" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1370993093602849" type="Text2">
+                    <param id="0" name="Text">DisconnectReason</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

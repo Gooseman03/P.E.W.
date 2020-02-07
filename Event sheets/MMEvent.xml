@@ -10,23 +10,47 @@
                 <condition id="-2" name="On start of layout" sid="4028441552502582" type="System" />
             </conditions>
             <actions>
-                <action id="6" name="Set focused" sid="1448421385538739" type="Name" />
+                <action id="-28" name="Set canvas size" sid="7018959590631204" type="System">
+                    <param id="0" name="Width">LayoutWidth</param>
+                    <param id="1" name="Height">LayoutHeight</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="1514897511660235" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="992553903453337" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
             </actions>
             <sub-events>
-                <event-block sid="3301766270202737">
-                    <conditions>
-                        <condition id="12" inverted="1" name="Supports multiplayer" sid="6896206443990042" type="Multiplayer" />
-                    </conditions>
+                <event-block sid="4804876639507628">
+                    <conditions />
                     <actions>
-                        <action id="0" name="Set text" sid="9653701573373942" type="MainTxt">
-                            <param id="0" name="Text">&quot;Multiplayer Not Supported&quot;</param>
+                        <action id="-4" name="Set layer visible" sid="1710098117858856" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="4" name="Set font color" sid="431934350786147" type="MainTxt">
-                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        <action id="-4" name="Set layer visible" sid="691430701970474" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Visibility">0</param>
                         </action>
+                        <action id="6" name="Set focused" sid="1448421385538739" type="Name" />
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="3301766270202737">
+            <conditions>
+                <condition id="12" inverted="1" name="Supports multiplayer" sid="6896206443990042" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="9653701573373942" type="MainTxt">
+                    <param id="0" name="Text">&quot;Multiplayer Not Supported&quot;</param>
+                </action>
+                <action id="4" name="Set font color" sid="431934350786147" type="MainTxt">
+                    <param id="0" name="Color">rgb(255, 0, 0)</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="8939603654663644">
             <conditions>

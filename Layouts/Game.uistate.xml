@@ -4,15 +4,15 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>2221.95</position-x>
-        <position-y>1036.09</position-y>
-        <position-z>379.75</position-z>
-        <lookat-x>2221.95</lookat-x>
-        <lookat-y>1036.09</lookat-y>
+        <position-x>1253.78</position-x>
+        <position-y>565.171</position-y>
+        <position-z>263.33</position-z>
+        <lookat-x>1253.78</lookat-x>
+        <lookat-y>565.171</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
-    <show-grid>1</show-grid>
+    <show-grid>0</show-grid>
     <snap-width>16</snap-width>
     <snap-height>16</snap-height>
     <show-collision-polys>0</show-collision-polys>
@@ -23,7 +23,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Background" />
+    <active-layer name="SubPlayer" />
     <layers>
         <layer locked="0" name="Invisible" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Background" parallax-in-editor="0" visible="1" />
@@ -31,6 +31,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layer locked="0" name="Player" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Effects" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="HUD" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Death Screen" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Death Screen" parallax-in-editor="0" visible="0" />
     </layers>
 </c2uistate>
