@@ -416,6 +416,32 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Room" uid="132">
+                    <properties>
+                        <text>Default</text>
+                        <placeholder>Room</placeholder>
+                        <tooltip></tooltip>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <read-only>No</read-only>
+                        <spell-check>No</spell-check>
+                        <type>Text</type>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>392</x>
+                        <y>528</y>
+                        <z>0</z>
+                        <width>192</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
