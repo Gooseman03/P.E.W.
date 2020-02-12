@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1">MainMenu</layout>
+        <layout>Game</layout>
+        <event-sheet>GameSheet</event-sheet>
+        <event-sheet>MMEvent</event-sheet>
+        <event-sheet>Event sheet 1</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/Entire Projects/" />
+        <folder expanded="1" path="object-folder/Text Bars/" />
+        <folder expanded="1" path="object-folder/Interactables/" />
+        <folder expanded="1" path="object-folder/Statics/" />
+        <folder expanded="1" path="object-folder/Main Menu Objects/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="event-folder/GameSheets/" />
+        <folder expanded="0" path="event-folder/MainMenu/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/EasterWall/" />
+        <folder expanded="1" path="animation-folder/Egg/" />
+        <folder expanded="1" path="animation-folder/Prop/" />
+        <folder expanded="1" path="animation-folder/EggSplat/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/letuscrunchimg/" />
+        <folder expanded="1" path="animation-folder/Character/" />
+        <folder expanded="1" path="animation-folder/Character/start/" />
+        <folder expanded="1" path="animation-folder/Character/Seeker/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+    </folders-expanded>
+</c2uistate>
