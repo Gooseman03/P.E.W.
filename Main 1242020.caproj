@@ -2,7 +2,7 @@
 <c2project>
     <name>Main 1242020</name>
     <description></description>
-    <version>1.0.0.0</version>
+    <version>1.1.1.1</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -71,12 +71,6 @@
             <object-type name="Browser" sid="8613507880820719">
                 <plugin id="Browser" />
             </object-type>
-            <object-type name="Function" sid="7324702549291202">
-                <plugin id="Function" />
-            </object-type>
-            <object-type name="Keyboard" sid="8661806851216536">
-                <plugin id="Keyboard" />
-            </object-type>
             <object-type name="Mouse" sid="8011253669732369">
                 <plugin id="Mouse" />
             </object-type>
@@ -85,6 +79,12 @@
             </object-type>
             <object-type name="Multiplayer" sid="8793032795814239">
                 <plugin id="Multiplayer" />
+            </object-type>
+            <object-type name="Keyboard" sid="8661806851216536">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Function" sid="7324702549291202">
+                <plugin id="Function" />
             </object-type>
         </object-folder>
         <object-folder name="Text Bars">
@@ -244,6 +244,10 @@
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\nm259002700\Downloads\FLOUR.png" />
             </object-type>
+            <object-type name="9patch" sid="8429775580909754">
+                <plugin id="NinePatch" />
+                <texture />
+            </object-type>
         </object-folder>
         <object-folder name="Main Menu Objects">
             <object-type name="Name" sid="2051991303445709">
@@ -256,6 +260,66 @@
                 <plugin id="Button" />
             </object-type>
             <object-type name="MainTxt" sid="6488725098479589">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Room" sid="2091315842890064">
+                <plugin id="TextBox" />
+            </object-type>
+            <object-type name="Sprite" sid="1585587778104255">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4202676074900232" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ma259003603\Downloads\New CharacterSprite(2).png">
+                            <collision-poly>
+                                <point x="0.497396" y="0.49537" />
+                                <point x="0.5" y="0.493519" />
+                                <point x="0.502083" y="0.496296" />
+                                <point x="0.504167" y="0.5" />
+                                <point x="0.502604" y="0.50463" />
+                                <point x="0.5" y="0.507407" />
+                                <point x="0.496875" y="0.505556" />
+                                <point x="0.496354" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite2" sid="3669463794308737">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6293209757243589" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ma259003603\Downloads\GREENMAN.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="letuscrunchimg" sid="4889011312926299">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9752941878740197" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nuker\Downloads\letuscrunchimg.png">
+                            <collision-poly>
+                                <point x="0.191489" y="0.225" />
+                                <point x="0.5" y="0" />
+                                <point x="0.87234" y="0.15" />
+                                <point x="1" y="0.5" />
+                                <point x="0.893617" y="0.875" />
+                                <point x="0.5" y="0.975" />
+                                <point x="0.106383" y="0.875" />
+                                <point x="0.0425532" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Esc Menu">
+            <object-type name="Exit" sid="6458022334959414">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="Return" sid="6317204696985329">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="EscMenuTitle" sid="2957937983461853">
                 <plugin id="Text" />
             </object-type>
         </object-folder>
@@ -345,7 +409,7 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nuker\Documents\GitHub\School\ArtWork\props\Debug.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="Prop1" pingpong="0" repeatcount="1" repeatto="0" sid="635433632043599" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\of259002688\Desktop\Owen Contruct\PixelArt (6).png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nuker\Downloads\1.png">
                         <collision-poly>
                             <point x="0.222222" y="0.08" />
                             <point x="0.5" y="0" />
@@ -390,68 +454,15 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="1585587778104255">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4202676074900232" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ma259003603\Downloads\New CharacterSprite(2).png">
-                        <collision-poly>
-                            <point x="0.497396" y="0.49537" />
-                            <point x="0.5" y="0.493519" />
-                            <point x="0.502083" y="0.496296" />
-                            <point x="0.504167" y="0.5" />
-                            <point x="0.502604" y="0.50463" />
-                            <point x="0.5" y="0.507407" />
-                            <point x="0.496875" y="0.505556" />
-                            <point x="0.496354" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite2" sid="3669463794308737">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6293209757243589" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ma259003603\Downloads\GREENMAN.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite3" sid="4647787712022448">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3139667087456349" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="letuscrunchimg" sid="4889011312926299">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9752941878740197" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nuker\Downloads\letuscrunchimg.png">
-                        <collision-poly>
-                            <point x="0.191489" y="0.225" />
-                            <point x="0.5" y="0" />
-                            <point x="0.87234" y="0.15" />
-                            <point x="1" y="0.5" />
-                            <point x="0.893617" y="0.875" />
-                            <point x="0.5" y="0.975" />
-                            <point x="0.106383" y="0.875" />
-                            <point x="0.0425532" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Text2" sid="1801403841942016">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Text3" sid="7466428705476795">
-            <plugin id="Text" />
-        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="PauseMenuButtons" plugin-id="Button" sid="4718393179097669">
+            <members>
+                <member>Exit</member>
+                <member>Return</member>
+            </members>
+        </family>
+    </families>
     <layout-folder>
         <layout>MainMenu.xml</layout>
         <layout>Game.xml</layout>
