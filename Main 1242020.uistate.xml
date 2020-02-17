@@ -10,10 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout>MainMenu</layout>
         <layout>Game</layout>
         <layout>Layout 1</layout>
-        <event-sheet active="1">GameSheet</event-sheet>
+        <layout active="1">MainMenu</layout>
+        <event-sheet>GameSheet</event-sheet>
         <event-sheet>MMEvent</event-sheet>
         <event-sheet>Event sheet 1</event-sheet>
     </open-tabs>
@@ -38,8 +38,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
-        <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="0" path="file-folder/Artwork sprites/" />
+        <folder expanded="1" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/EasterWall/" />
         <folder expanded="1" path="animation-folder/Egg/" />
         <folder expanded="1" path="animation-folder/Prop/" />

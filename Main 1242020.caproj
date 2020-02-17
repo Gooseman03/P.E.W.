@@ -38,9 +38,7 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
-        <effect author="Scirra" id="gamma">Gamma</effect>
         <effect author="Scirra" id="radialblur">Radial blur</effect>
-        <effect author="Brad Larson" id="vignette">Vignette</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -347,7 +345,7 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nuker\Documents\GitHub\School\ArtWork\props\Debug.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="Prop1" pingpong="0" repeatcount="1" repeatto="0" sid="635433632043599" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Nuker\Downloads\1.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\of259002688\Desktop\Owen Contruct\PixelArt (6).png">
                         <collision-poly>
                             <point x="0.222222" y="0.08" />
                             <point x="0.5" y="0" />
@@ -487,81 +485,6 @@
             <file name="icon-128.png" />
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
-        </file-folder>
-        <file-folder name="Artwork sprites">
-            <file name="16 Bit5(1).png" />
-            <file name="16 Bit5(1)F.png" />
-            <file name="16 Bit5(2).png" />
-            <file name="16 Bit5.png" />
-            <file name="Debug.png" />
-            <file name="kazzoo.png" />
-            <file name="prop11.png" />
-            <file name="prop12.png" />
-            <file name="prop13.png" />
-            <file name="Props 5.png" />
-            <file name="Props 21.png" />
-            <file name="Props 22.png" />
-            <file name="Props 23.png" />
-            <file name="Props 24.png" />
-            <file name="Props 31.png" />
-            <file name="Props 32.png" />
-            <file name="Props 33.png" />
-            <file name="Props 34.png" />
-            <file name="Props 41.png" />
-            <file name="Props 42.png" />
-            <file name="Props 43.png" />
-            <file name="Props 44.png" />
-            <file name="Props 45.png" />
-            <file name="Props 46.png" />
-            <file name="Props 47.png" />
-            <file name="Props 48.png" />
-            <file name="Props 51.png" />
-            <file name="Props 52.png" />
-            <file name="Props 53.png" />
-            <file name="Props 54.png" />
-            <file name="Props 55.png" />
-            <file name="Character.xcf.png" />
-            <file name="Character1.xcf.png" />
-            <file name="Character2.xcf.png" />
-            <file name="Character3.xcf.png" />
-            <file name="Character4.xcf.png" />
-            <file name="flashlight.png" />
-            <file name="ok boomer 1.png" />
-            <file name="ok boomer 2.png" />
-            <file name="Untitled.png" />
-            <file name="Untitled2.png" />
-            <file name="Untitledback1.png" />
-            <file name="Untitledback2.png" />
-            <file name="Untitledleft1.png" />
-            <file name="Untitledleft2.png" />
-            <file name="Untitledright1.png" />
-            <file name="Untitledright2.png" />
-            <file name="Character1.xcf2.png" />
-            <file name="Character1egged.xcf.xcf" />
-            <file name="Character1walk1.xcf.png" />
-            <file name="Character1walk2.xcf.png" />
-            <file name="Character1walk3.xcf.png" />
-            <file name="Character1walk4.xcf.png" />
-            <file name="Character2.xcf2.png" />
-            <file name="Character2egged.xcf.png" />
-            <file name="Character2egged.xcf.xcf" />
-            <file name="Character3.xcf2.png" />
-            <file name="Character3egged.xcf.png" />
-            <file name="Character3egged.xcf.xcf" />
-            <file name="Character4 walk 1.xcf.png" />
-            <file name="Character4 walk 2.xcf.png" />
-            <file name="Character4 walk 3.xcf.png" />
-            <file name="Character4 walk 4.xcf.png" />
-            <file name="Character4.xcf2.png" />
-            <file name="Character4egged.xcf.png" />
-            <file name="Character4egged.xcf.xcf" />
-            <file name="Character.xcf2.png" />
-            <file name="Characteregged.xcf.png" />
-            <file name="Characteregged.xcf.xcf" />
-            <file name="Characterwalk1.xcf.png" />
-            <file name="Characterwalk2.xcf.png" />
-            <file name="Characterwalk3.xcf.png" />
-            <file name="Characterwalk4.xcf.png" />
         </file-folder>
     </files-folder>
 </c2project>
