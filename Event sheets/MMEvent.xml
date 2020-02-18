@@ -119,19 +119,11 @@
                             <param id="1" name="Case">0</param>
                         </condition>
                         <condition id="12" name="Supports multiplayer" sid="3673965912754524" type="Multiplayer" />
-                        <condition id="0" inverted="1" name="Compare text" sid="9373867325975346" type="Room">
-                            <param id="0" name="Text">&quot;&quot;</param>
-                            <param id="1" name="Case">0</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="6780325005542278" type="System">
                             <param id="0" name="Variable">MyUsername</param>
                             <param id="1" name="Value">Name.Text</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="3499289615657295" type="System">
-                            <param id="0" name="Variable">ROOM</param>
-                            <param id="1" name="Value">Room.Text</param>
                         </action>
                         <action id="-9" name="Set value" sid="2743788643134515" type="System">
                             <param id="0" name="Variable">Player</param>
@@ -157,19 +149,11 @@
                             <param id="1" name="Case">0</param>
                         </condition>
                         <condition id="12" name="Supports multiplayer" sid="6926986847416865" type="Multiplayer" />
-                        <condition id="0" inverted="1" name="Compare text" sid="9507197226350626" type="Room">
-                            <param id="0" name="Text">&quot;&quot;</param>
-                            <param id="1" name="Case">0</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="5493968066367221" type="System">
                             <param id="0" name="Variable">MyUsername</param>
                             <param id="1" name="Value">Name.Text</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="8348260810142965" type="System">
-                            <param id="0" name="Variable">ROOM</param>
-                            <param id="1" name="Value">Room.Text</param>
                         </action>
                         <action id="-9" name="Set value" sid="7123245265224178" type="System">
                             <param id="0" name="Variable">Player</param>
@@ -181,18 +165,6 @@
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="5257367982388822">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="4581677872077863" type="Keyboard">
-                    <param id="0" name="Key">192 (`)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="3" name="Set visible" sid="8947503875891031" type="Room">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-            </actions>
         </event-block>
     </events>
 </c2eventsheet>
