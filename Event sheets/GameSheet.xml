@@ -3,28 +3,22 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameSheet</name>
     <events>
-        <variable constant="0" name="SeekAmount" sid="82069819642261" static="0" type="number">0</variable>
-        <variable constant="0" name="HideAmount" sid="4137392396330517" static="0" type="number">0</variable>
         <variable constant="0" name="GAME" sid="8399822424580422" static="0" type="text">PEW-MHS</variable>
-        <variable constant="0" name="ROOM" sid="3407956745405482" static="0" type="text">gfas</variable>
-        <variable constant="0" name="SeekerSpeed" sid="698492912039556" static="0" type="number">350</variable>
-        <variable constant="0" name="HiderSpeed" sid="8291880284206847" static="0" type="number">500</variable>
-        <variable constant="0" name="StartingHealth" sid="5520965656280016" static="0" type="number">6</variable>
-        <variable constant="0" name="DisconnectReason" sid="2290846145957905" static="0" type="text"></variable>
+        <variable constant="0" name="INSTANCE" sid="9894968676751812" static="0" type="text">MHSPEW</variable>
+        <variable constant="0" name="ROOM" sid="3407956745405482" static="0" type="text">Game</variable>
+        <variable constant="0" name="SeekerSpeed" sid="698492912039556" static="0" type="number">400</variable>
+        <variable constant="0" name="StartingHealth" sid="5520965656280016" static="0" type="number">10</variable>
+        <variable constant="0" name="HiderSpeed" sid="8291880284206847" static="0" type="number">350</variable>
         <variable constant="0" name="TimerMins" sid="9385367111272754" static="0" type="number">0</variable>
         <variable constant="0" name="TimerSec" sid="9822433855055073" static="0" type="number">0</variable>
         <variable constant="0" name="Timer" sid="5802275552955822" static="0" type="number">300</variable>
-        <variable constant="0" name="INSTANCE" sid="9894968676751812" static="0" type="text">HMM</variable>
+        <variable constant="0" name="Paused" sid="6000174311462584" static="0" type="number">0</variable>
         <event-block sid="6006889432655459">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="2265746474827073" type="System" />
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="158425720011884" type="Character" />
-                <action id="-9" name="Set value" sid="8738461233613061" type="System">
-                    <param id="0" name="Variable">TimerSec</param>
-                    <param id="1" name="Value">Timer</param>
-                </action>
                 <action id="-28" name="Set canvas size" sid="6574730224369469" type="System">
                     <param id="0" name="Width">1920</param>
                     <param id="1" name="Height">1080</param>
@@ -132,6 +126,78 @@
                     <param id="0" name="Maximum">StartingHealth</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="7977245951442769">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="7466115692474381" type="System">
+                            <param id="0" name="Variable">TimerSec</param>
+                            <param id="1" name="Value">Timer</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7402381242744461">
+                    <conditions>
+                        <condition id="-23" name="While" sid="9296195430224646" type="System" />
+                        <condition id="-14" name="Compare variable" sid="6629320012376626" type="System">
+                            <param id="0" name="Variable">TimerSec</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">60</param>
+                        </condition>
+                        <condition id="-14" inverted="1" name="Compare variable" sid="1547021485298186" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="8248762366261032" type="System">
+                            <param id="0" name="Variable">TimerSec</param>
+                            <param id="1" name="Value">60</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="7437440294617739" type="System">
+                            <param id="0" name="Variable">TimerMins</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6674214743636124">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="6748298111299878" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9055288291560593">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="7888869644232689" type="System">
+                            <param id="0" name="Layer">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="3460395012214652" type="System">
+                            <param id="0" name="Layer">7</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6796886522211698">
+                    <conditions>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="4513087666416738" type="System">
+                            <param id="0" name="Layer">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="3039724210036039" type="System">
+                            <param id="0" name="Layer">7</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="928633697062014">
             <conditions>
@@ -171,7 +237,6 @@
             </conditions>
             <actions />
             <sub-events>
-                <comment>Depending on who you choose, changes win condition variables</comment>
                 <event-block sid="95679111995693">
                     <conditions>
                         <condition id="10" name="Is host" sid="2593032463958483" type="Multiplayer" />
@@ -229,24 +294,6 @@
                                 <action id="4" name="Set maximum" sid="9077887096433963" type="HealthBar">
                                     <param id="0" name="Maximum">StartingHealth</param>
                                 </action>
-                                <action id="-10" name="Add to" sid="7819636951676604" type="System">
-                                    <param id="0" name="Variable">SeekAmount</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="2134505814893959" type="System">
-                                    <param id="0" name="Object to create">TinyThing</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="X">Character.X</param>
-                                    <param id="3" name="Y">Character.Y</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="6834684845078006" type="TinyThing">
-                                    <param id="0" name="Pin to">Character</param>
-                                    <param id="1" name="Mode">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="9153512798242724" type="TinyThing">
-                                    <param id="0" name="Instance variable">ID</param>
-                                    <param id="1" name="Value">Character.ID</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="1786924074694709">
@@ -279,10 +326,6 @@
                                 </action>
                                 <action behavior="8Direction" id="4" name="Set max speed" sid="2146847363064728" type="Character">
                                     <param id="0" name="Max Speed">HiderSpeed</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="3801190824863884" type="System">
-                                    <param id="0" name="Variable">HideAmount</param>
-                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -377,6 +420,19 @@
                                             <param id="1" name="Value">Multiplayer.PeerState(Character.ID, &quot;Inputs&quot;)</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="2388079387479347">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="1158913443626498" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-12" name="Set group active" sid="6518742006031454" type="System">
+                                                    <param id="0" name="Group name">&quot;HostTimer&quot;</param>
+                                                    <param id="1" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="3696189234451152">
                                     <conditions>
@@ -435,23 +491,8 @@
                                                             <param id="0" name="Animation">&quot;Seeker&quot;</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
-                                                        <action id="2" name="Stop" sid="5082437120252312" type="Character" />
                                                         <action behavior="8Direction" id="4" name="Set max speed" sid="4827170803287036" type="Character">
                                                             <param id="0" name="Max Speed">SeekerSpeed</param>
-                                                        </action>
-                                                        <action id="-3" name="Create object" sid="3994180706507495" type="System">
-                                                            <param id="0" name="Object to create">TinyThing</param>
-                                                            <param id="1" name="Layer">2</param>
-                                                            <param id="2" name="X">0</param>
-                                                            <param id="3" name="Y">0</param>
-                                                        </action>
-                                                        <action behavior="Pin" id="0" name="Pin to object" sid="5704916933259147" type="TinyThing">
-                                                            <param id="0" name="Pin to">Character</param>
-                                                            <param id="1" name="Mode">1</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="6287526739910422" type="TinyThing">
-                                                            <param id="0" name="Instance variable">ID</param>
-                                                            <param id="1" name="Value">Character.ID</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -506,39 +547,6 @@
                                                     <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
-                                            <sub-events>
-                                                <comment>Checks message text, changes variables for win conditions</comment>
-                                                <event-block sid="2867105984144124">
-                                                    <conditions>
-                                                        <condition id="-8" name="Compare two values" sid="5277117462630357" type="System">
-                                                            <param id="0" name="First value">Multiplayer.Message</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Second value">&quot;Hider&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-10" name="Add to" sid="1859894573428239" type="System">
-                                                            <param id="0" name="Variable">HideAmount</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="9623944287815225">
-                                                    <conditions>
-                                                        <condition id="-8" name="Compare two values" sid="2686918913631477" type="System">
-                                                            <param id="0" name="First value">Multiplayer.Message</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Second value">&quot;Seeker&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-10" name="Add to" sid="9357466161403985" type="System">
-                                                            <param id="0" name="Variable">SeekAmount</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -620,39 +628,6 @@
                                                         <action id="-4" name="Set layer visible" sid="4203561550897784" type="System">
                                                             <param id="0" name="Layer">6</param>
                                                             <param id="1" name="Visibility">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <comment>Depending on what role they are, changes win condition variables</comment>
-                                                <event-block sid="143870571639865">
-                                                    <conditions>
-                                                        <condition id="-4" name="Trigger once while true" sid="5346003586113565" type="System" />
-                                                        <condition id="-7" name="Compare instance variable" sid="7927078389727275" type="Character">
-                                                            <param id="0" name="Instance variable">Role</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">2</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-11" name="Subtract from" sid="4201624064330686" type="System">
-                                                            <param id="0" name="Variable">HideAmount</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="3946827427045991">
-                                                    <conditions>
-                                                        <condition id="-4" name="Trigger once while true" sid="190096462138334" type="System" />
-                                                        <condition id="-7" name="Compare instance variable" sid="1336459011159226" type="Character">
-                                                            <param id="0" name="Instance variable">Role</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">1</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-11" name="Subtract from" sid="8145163914232289" type="System">
-                                                            <param id="0" name="Variable">SeekAmount</param>
-                                                            <param id="1" name="Value">1</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -908,11 +883,6 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">1</param>
                                                 </condition>
-                                                <condition id="-7" name="Compare instance variable" sid="4636244609534124" type="Character">
-                                                    <param id="0" name="Instance variable">Health</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
@@ -921,14 +891,9 @@
                                                         <condition id="-6" name="Every X seconds" sid="243650463691088" type="System">
                                                             <param id="0" name="Interval (seconds)">0.5</param>
                                                         </condition>
-                                                        <condition id="-7" name="Compare instance variable" sid="3813813354729331" type="TinyThing">
-                                                            <param id="0" name="Instance variable">ID</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">Character.ID</param>
-                                                        </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="0" name="Spawn another object" sid="5200293897733705" type="TinyThing">
+                                                        <action id="0" name="Spawn another object" sid="5200293897733705" type="Character">
                                                             <param id="0" name="Object">Egg</param>
                                                             <param id="1" name="Layer">2</param>
                                                             <param id="2" name="Image point">1</param>
@@ -950,7 +915,7 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-22" name="Set angle toward position" sid="5249402156566816" type="TinyThing">
+                                                <action id="-22" name="Set angle toward position" sid="5249402156566816" type="Character">
                                                     <param id="0" name="X">Character.MouseX</param>
                                                     <param id="1" name="Y">Character.MouseY</param>
                                                 </action>
@@ -1039,11 +1004,6 @@
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
-                                                <condition id="-7" name="Compare instance variable" sid="2456341955051946" type="Character">
-                                                    <param id="0" name="Instance variable">Health</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
                                                 <condition id="2" name="Mouse button is down" sid="2459609409202052" type="Mouse">
                                                     <param id="0" name="Mouse button">0</param>
                                                 </condition>
@@ -1055,14 +1015,9 @@
                                                         <condition id="-6" name="Every X seconds" sid="3098360801429926" type="System">
                                                             <param id="0" name="Interval (seconds)">0.5</param>
                                                         </condition>
-                                                        <condition id="-7" name="Compare instance variable" sid="3381490008624302" type="TinyThing">
-                                                            <param id="0" name="Instance variable">ID</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">Character.ID</param>
-                                                        </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="0" name="Spawn another object" sid="3858877799776789" type="TinyThing">
+                                                        <action id="0" name="Spawn another object" sid="5672378162149161" type="Character">
                                                             <param id="0" name="Object">Egg</param>
                                                             <param id="1" name="Layer">2</param>
                                                             <param id="2" name="Image point">1</param>
@@ -1120,6 +1075,11 @@
                                         <condition id="-6" name="Every X seconds" sid="3182621510740289" type="System">
                                             <param id="0" name="Interval (seconds)">1</param>
                                         </condition>
+                                        <condition id="-14" name="Compare variable" sid="3875772127193827" type="System">
+                                            <param id="0" name="Variable">Timer</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-11" name="Subtract from" sid="8372356807740045" type="System">
@@ -1147,7 +1107,7 @@
                                                 </action>
                                                 <action id="-10" name="Add to" sid="5555853214226365" type="System">
                                                     <param id="0" name="Variable">TimerSec</param>
-                                                    <param id="1" name="Value">59</param>
+                                                    <param id="1" name="Value">60</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1245,24 +1205,6 @@
                                     <actions />
                                     <sub-events>
                                         <comment bookmark="1">Added Disconnect </comment>
-                                        <event-block sid="2065753293378812">
-                                            <conditions>
-                                                <condition id="-11" name="For Each" sid="36538194922837" type="System">
-                                                    <param id="0" name="Object">Character</param>
-                                                </condition>
-                                                <condition id="-7" name="Compare instance variable" sid="6859459322510702" type="Character">
-                                                    <param id="0" name="Instance variable">ID</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Value">Multiplayer.MyID</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="21" name="Kick peer" sid="1374872701755418" type="Multiplayer">
-                                                    <param id="0" name="Peer ID">Character.ID</param>
-                                                    <param id="1" name="Reason">&quot;gameover&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
                                         <event-block sid="5082023962678228">
                                             <conditions />
                                             <actions>
@@ -1277,14 +1219,15 @@
                                 </event-block>
                                 <event-block sid="6300810491243946">
                                     <conditions>
+                                        <condition id="-23" name="While" sid="5398117333864005" type="System" />
                                         <condition id="-14" name="Compare variable" sid="9191716640349312" type="System">
                                             <param id="0" name="Variable">TimerSec</param>
                                             <param id="1" name="Comparison">5</param>
                                             <param id="2" name="Value">60</param>
                                         </condition>
-                                        <condition id="-14" inverted="1" name="Compare variable" sid="6900388396973207" type="System">
+                                        <condition id="-14" name="Compare variable" sid="6900388396973207" type="System">
                                             <param id="0" name="Variable">Timer</param>
-                                            <param id="1" name="Comparison">2</param>
+                                            <param id="1" name="Comparison">5</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
@@ -1298,116 +1241,6 @@
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-group>
-                        <event-group description="" sid="2789181374526787" title="Win Conditions">
-                            <sub-events>
-                                <variable constant="0" name="WinState" sid="7831747975685001" static="0" type="number">0</variable>
-                                <comment>I believe that if 4 players join, there will be a difference in which characters are choose</comment>
-                                <event-block sid="2245123423414779">
-                                    <conditions>
-                                        <condition id="20" name="Compare peer count" sid="8992291726940759" type="Multiplayer">
-                                            <param id="0" name="Comparison">5</param>
-                                            <param id="1" name="Count">4</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="1306209433789424">
-                                            <conditions>
-                                                <condition id="-6" name="Every X seconds" sid="6123355774884648" type="System">
-                                                    <param id="0" name="Interval (seconds)">10</param>
-                                                </condition>
-                                                <condition id="-14" name="Compare variable" sid="2989758610271168" type="System">
-                                                    <param id="0" name="Variable">HideAmount</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Set text" sid="2914531778930157" type="XWins">
-                                                    <param id="0" name="Text">&quot;SEEKERS WIN!&quot;</param>
-                                                </action>
-                                                <action id="-15" name="Set visible" sid="1712231574424587" type="XWins">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                                <action id="9" name="Broadcast message" sid="4716078432416522" type="Multiplayer">
-                                                    <param id="0" name="From ID">&quot;&quot;</param>
-                                                    <param id="1" name="Tag">&quot;Wincon&quot;</param>
-                                                    <param id="2" name="Message">&quot;SeekWin&quot;</param>
-                                                    <param id="3" name="Mode">0</param>
-                                                </action>
-                                                <action id="-9" name="Set value" sid="5898014909523502" type="System">
-                                                    <param id="0" name="Variable">WinState</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="9520659309366673">
-                                            <conditions>
-                                                <condition id="-6" name="Every X seconds" sid="3056021171048788" type="System">
-                                                    <param id="0" name="Interval (seconds)">10</param>
-                                                </condition>
-                                                <condition id="-14" name="Compare variable" sid="8780455394217655" type="System">
-                                                    <param id="0" name="Variable">SeekAmount</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Set text" sid="8357940286472539" type="XWins">
-                                                    <param id="0" name="Text">&quot;HIDERS WIN!&quot;</param>
-                                                </action>
-                                                <action id="-15" name="Set visible" sid="2424339327384575" type="XWins">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                                <action id="9" name="Broadcast message" sid="2358506399788365" type="Multiplayer">
-                                                    <param id="0" name="From ID">&quot;&quot;</param>
-                                                    <param id="1" name="Tag">&quot;Wincon&quot;</param>
-                                                    <param id="2" name="Message">&quot;HideWin&quot;</param>
-                                                    <param id="3" name="Mode">0</param>
-                                                </action>
-                                                <action id="-9" name="Set value" sid="9282052099479026" type="System">
-                                                    <param id="0" name="Variable">WinState</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="7217187078392572">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="9385733467906665" type="System">
-                                                    <param id="0" name="Variable">Timer</param>
-                                                    <param id="1" name="Comparison">3</param>
-                                                    <param id="2" name="Value">10</param>
-                                                </condition>
-                                                <condition id="-14" name="Compare variable" sid="1624648080525413" type="System">
-                                                    <param id="0" name="Variable">HideAmount</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                                <condition id="-14" name="Compare variable" sid="4497727131124436" type="System">
-                                                    <param id="0" name="Variable">WinState</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Set text" sid="4866666564524113" type="XWins">
-                                                    <param id="0" name="Text">&quot;HIDERS WIN!&quot;</param>
-                                                </action>
-                                                <action id="-15" name="Set visible" sid="4032804872482151" type="XWins">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                                <action id="9" name="Broadcast message" sid="8754614019427854" type="Multiplayer">
-                                                    <param id="0" name="From ID">&quot;&quot;</param>
-                                                    <param id="1" name="Tag">&quot;Wincon&quot;</param>
-                                                    <param id="2" name="Message">&quot;HideWin&quot;</param>
-                                                    <param id="3" name="Mode">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>
@@ -1610,51 +1443,6 @@
                                                 <action id="4" name="Set animation" sid="4366112793124731" type="Character">
                                                     <param id="0" name="Animation">Multiplayer.Message</param>
                                                     <param id="1" name="From">1</param>
-                                                </action>
-                                                <action id="2" name="Stop" sid="6010886206186659" type="Character" />
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="6686229665259911">
-                                    <conditions>
-                                        <condition id="15" name="On peer message" sid="3231422884169263" type="Multiplayer">
-                                            <param id="0" name="Tag">&quot;Wincon&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="754068320785171">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="5691277045310729" type="System">
-                                                    <param id="0" name="First value">Multiplayer.Message</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">&quot;SeekWin&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Set text" sid="544416220440751" type="XWins">
-                                                    <param id="0" name="Text">&quot;SEEKERS WIN!&quot;</param>
-                                                </action>
-                                                <action id="-15" name="Set visible" sid="7452681720535363" type="XWins">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="393332116351333">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="9542120587526746" type="System">
-                                                    <param id="0" name="First value">Multiplayer.Message</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">&quot;HideWin&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Set text" sid="8506001360572168" type="XWins">
-                                                    <param id="0" name="Text">&quot;HIDERS WIN!&quot;</param>
-                                                </action>
-                                                <action id="-15" name="Set visible" sid="6169906502677882" type="XWins">
-                                                    <param id="0" name="Visibility">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -2061,9 +1849,73 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment bookmark="1">Pause Menu Tigger</comment>
+                <event-block any="1" sid="1547003181005644">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8933248652350007" type="System" />
+                        <condition id="0" name="On key pressed" sid="6384167276712774" type="Keyboard">
+                            <param id="0" name="Key">27 (Esc)</param>
+                        </condition>
+                        <condition id="0" name="On clicked" sid="8414564570117944" type="Return" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1483672357799377">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7074948104730364" type="System">
+                                    <param id="0" name="Variable">Paused</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6894101453522993">
+                                    <conditions />
+                                    <actions>
+                                        <action id="3" name="Set enabled" sid="4393225755998819" type="PauseMenuButtons">
+                                            <param id="0" name="Mode">0</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="1881457305950379" type="System">
+                                            <param id="0" name="Layer">7</param>
+                                            <param id="1" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9738223748175784" type="System">
+                                            <param id="0" name="Variable">Paused</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4029281723419477">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1203789309972314" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8374433161140242">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="5354704989153747" type="System">
+                                            <param id="0" name="Layer">7</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                        <action id="3" name="Set enabled" sid="3715959057327624" type="PauseMenuButtons">
+                                            <param id="0" name="Mode">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9461509243710081" type="System">
+                                            <param id="0" name="Variable">Paused</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-group description="" inactive="1" sid="1791863557266846" title="Seeker">
                     <sub-events>
-                        <include>Line Of sight</include>
                         <event-block sid="2075745325953057">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="9109882860634566" type="Character">
@@ -2094,7 +1946,7 @@
                                         <condition id="-1" name="Every tick" sid="5106937953811486" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-22" name="Set angle toward position" sid="8915682681003154" type="TinyThing">
+                                        <action id="-22" name="Set angle toward position" sid="8915682681003154" type="Character">
                                             <param id="0" name="X">Mouse.X</param>
                                             <param id="1" name="Y">Mouse.Y</param>
                                         </action>
@@ -2202,6 +2054,7 @@
                 <condition id="-3" name="On end of layout" sid="3106229861990342" type="System" />
             </conditions>
             <actions>
+                <action id="-21" name="Reset global variables" sid="8509311493696131" type="System" />
                 <action id="-12" name="Set group active" sid="3108904158338217" type="System">
                     <param id="0" name="Group name">&quot;Peer&quot;</param>
                     <param id="1" name="State">0</param>
@@ -2214,11 +2067,57 @@
                     <param id="0" name="Group name">&quot;Seeker&quot;</param>
                     <param id="1" name="State">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="4225514995745619" type="XWins">
-                    <param id="0" name="Visibility">0</param>
+                <action id="-9" name="Set value" sid="930319405328348" type="System">
+                    <param id="0" name="Variable">Paused</param>
+                    <param id="1" name="Value">0</param>
                 </action>
-                <action id="-21" name="Reset global variables" sid="8509311493696131" type="System" />
             </actions>
         </event-block>
+        <event-group description="" sid="4090026354462171" title="Pause Menu">
+            <sub-events>
+                <event-block sid="180787670999384">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="9147231597728777" type="Exit" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7457442121184789">
+                            <conditions>
+                                <condition id="10" name="Is host" sid="555233920309226" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4786116536697487" type="System">
+                                    <param id="0" name="Variable">TimerSec</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1899448681416078" type="System">
+                                    <param id="0" name="Variable">TimerMins</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7833689707792701" type="System">
+                                    <param id="0" name="Variable">Timer</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="3" name="Set enabled" sid="7799157896696246" type="Exit">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6381176058610411">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="418214583338812" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Disconnect" sid="6817341808798416" type="Multiplayer" />
+                                <action id="2" name="Disconnect" sid="6227230864961663" type="Multiplayer" />
+                                <action id="-2" name="Go to layout" sid="9525933036006906" type="System">
+                                    <param id="0" name="Layout">MainMenu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

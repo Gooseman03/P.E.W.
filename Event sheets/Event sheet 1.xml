@@ -7,11 +7,7 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="1232386949405571" type="System" />
             </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="1370993093602849" type="Text2">
-                    <param id="0" name="Text">DisconnectReason</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>
