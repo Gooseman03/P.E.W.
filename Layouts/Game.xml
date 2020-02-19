@@ -1461,7 +1461,17 @@
                     </world>
                 </instance>
             </instances>
-            <effects />
+            <effects>
+                <effect-type name="RadialBlur">
+                    <effect id="radialblur" />
+                    <effect-instance type="RadialBlur">
+                        <parameters>
+                            <intensity>0</intensity>
+                            <radius>0.4</radius>
+                        </parameters>
+                    </effect-instance>
+                </effect-type>
+            </effects>
         </layer>
         <layer name="SubPlayer" sid="3020098772489455">
             <initially-visible>1</initially-visible>
@@ -1550,7 +1560,17 @@
                     </world>
                 </instance>
             </instances>
-            <effects />
+            <effects>
+                <effect-type name="RadialBlur">
+                    <effect id="radialblur" />
+                    <effect-instance type="RadialBlur">
+                        <parameters>
+                            <intensity>0</intensity>
+                            <radius>0.4</radius>
+                        </parameters>
+                    </effect-instance>
+                </effect-type>
+            </effects>
         </layer>
         <layer name="Player" sid="8421912661150119">
             <initially-visible>1</initially-visible>
@@ -1619,8 +1639,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>293</x>
-                        <y>-173</y>
+                        <x>288</x>
+                        <y>-176</y>
                         <z>0</z>
                         <width>50</width>
                         <height>50</height>
@@ -3572,8 +3592,46 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="TinyThing" uid="136">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ID></ID>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>384</x>
+                        <y>-176</y>
+                        <z>0</z>
+                        <width>35</width>
+                        <height>35</height>
+                        <depth>0</depth>
+                        <hotspotX>0.514285743</hotspotX>
+                        <hotspotY>0.514285743</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
-            <effects />
+            <effects>
+                <effect-type name="RadialBlur">
+                    <effect id="radialblur" />
+                    <effect-instance type="RadialBlur">
+                        <parameters>
+                            <intensity>0</intensity>
+                            <radius>0.4</radius>
+                        </parameters>
+                    </effect-instance>
+                </effect-type>
+            </effects>
         </layer>
         <layer name="Effects" sid="7656465360528924">
             <initially-visible>1</initially-visible>
@@ -3835,15 +3893,5 @@
             </properties>
         </instance>
     </nonworld-instances>
-    <effects>
-        <effect-type name="RadialBlur">
-            <effect id="radialblur" />
-            <effect-instance type="RadialBlur">
-                <parameters>
-                    <intensity>0.1</intensity>
-                    <radius>0.4</radius>
-                </parameters>
-            </effect-instance>
-        </effect-type>
-    </effects>
+    <effects />
 </c2layout>
