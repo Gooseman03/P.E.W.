@@ -22,11 +22,13 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
         <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
@@ -58,7 +60,7 @@
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
-        <prop name="Orientations">Any</prop>
+        <prop name="Orientations">Landscape</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D web</prop>
         <prop name="Preload sounds">Yes</prop>
@@ -215,24 +217,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="TinyThing" sid="722308801841133">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="ID" sid="1640613871280381" type="string" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Pin" sid="3421674822044702">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4648936395070338" speed="5">
-                        <frame duration="1" hotspotX="0.514286" hotspotY="0.514286">
-                            <image-point name="Imagepoint 1" x="1.42857" y="0.428571" />
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
         </object-folder>
         <object-folder name="Statics">
             <object-type name="HealthBar" sid="1687895632622393">
@@ -340,6 +324,9 @@
             <object-type name="EscMenuTitle" sid="2957937983461853">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="Touch" sid="596393510423728">
+                <plugin id="Touch" />
+            </object-type>
         </object-folder>
         <object-type name="Character" sid="6009343635477254">
             <plugin id="Sprite" />
@@ -379,40 +366,40 @@
                 <animation-folder name="Seeker">
                     <animation framecount="3" loop="1" name="Seeker" pingpong="0" repeatcount="-1" repeatto="1" sid="9958827624433061" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\nm259002700\Downloads\Files\Character4.xcf.png">
-                            <image-point name="Imagepoint 1" x="0" y="0.5" />
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
                             <collision-poly>
-                                <point x="0.9375" y="0.5" />
-                                <point x="0.875" y="0.875" />
+                                <point x="0.5" y="0.0625001" />
+                                <point x="0.875" y="0.125" />
+                                <point x="1" y="0.5" />
+                                <point x="0.8125" y="0.8125" />
                                 <point x="0.5" y="1" />
-                                <point x="0.1875" y="0.8125" />
-                                <point x="0" y="0.5" />
-                                <point x="0.25" y="0.25" />
-                                <point x="0.5" y="0.0625" />
-                                <point x="0.8125" y="0.1875" />
+                                <point x="0.25" y="0.75" />
+                                <point x="0.0625" y="0.5" />
+                                <point x="0.1875" y="0.1875" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\nm259002700\Downloads\Files\Character4 walk 1.xcf.png">
                             <collision-poly>
-                                <point x="0.9375" y="0.5" />
-                                <point x="0.875" y="0.875" />
-                                <point x="0.5" y="1" />
-                                <point x="0.1875" y="0.8125" />
-                                <point x="0" y="0.5" />
-                                <point x="0.25" y="0.25" />
                                 <point x="0.5" y="0.0625" />
-                                <point x="0.8125" y="0.1875" />
+                                <point x="0.875" y="0.125" />
+                                <point x="1" y="0.5" />
+                                <point x="0.8125" y="0.8125" />
+                                <point x="0.5" y="1" />
+                                <point x="0.25" y="0.75" />
+                                <point x="0.0625" y="0.5" />
+                                <point x="0.1875" y="0.1875" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\nm259002700\Downloads\Files\Character4 walk 2.xcf.png">
                             <collision-poly>
-                                <point x="0.9375" y="0.5" />
-                                <point x="0.875" y="0.875" />
-                                <point x="0.5" y="0.9375" />
-                                <point x="0.1875" y="0.8125" />
-                                <point x="0" y="0.5" />
-                                <point x="0.25" y="0.25" />
                                 <point x="0.5" y="0.0625" />
-                                <point x="0.8125" y="0.1875" />
+                                <point x="0.875" y="0.125" />
+                                <point x="0.9375" y="0.5" />
+                                <point x="0.8125" y="0.8125" />
+                                <point x="0.5" y="1" />
+                                <point x="0.25" y="0.75" />
+                                <point x="0.0625" y="0.5" />
+                                <point x="0.1875" y="0.1875" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -475,11 +462,32 @@
         <object-type name="Text2" sid="2045841418289836">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Sprite3" sid="5824028688005972">
+        <object-type name="Sprite3" sid="3137879123278788">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7993242635040452" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5920242447464036" speed="5">
+                    <frame duration="1" hotspotX="0.502164" hotspotY="0.5" original-source="C:\Users\MP259003707\Desktop\P.E.W.-Gooseman03-patch-4\Files\circle.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="stick" sid="3514023970253595">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="6438755121442743">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="67428598843796" speed="5">
+                    <frame duration="1" hotspotX="0.491803" hotspotY="0.52459" original-source="C:\Users\MP259003707\Desktop\P.E.W.-Gooseman03-patch-4\Files\circle.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="stickPad" sid="6036238506190122">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6653043749690222" speed="5">
+                    <frame duration="1" hotspotX="0.504" hotspotY="0.504" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -508,6 +516,11 @@
         <global-instance type="Mouse" uid="4" />
         <global-instance type="Function" uid="8" />
         <global-instance type="Browser" uid="59" />
+        <global-instance type="Touch" uid="138">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder />
     <music-folder />
