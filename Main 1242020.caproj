@@ -483,6 +483,12 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TimerChange" sid="5702711236736458">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="SubmitTimerChange" sid="8349428916824986">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families>
         <family name="PauseMenuButtons" plugin-id="Button" sid="4718393179097669">

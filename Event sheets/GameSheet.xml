@@ -995,6 +995,31 @@
                         </event-group>
                         <event-group description="" sid="9581830080481577" title="HostTimer">
                             <sub-events>
+                                <event-block sid="6300810491243946">
+                                    <conditions>
+                                        <condition id="-23" name="While" sid="5398117333864005" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="9191716640349312" type="System">
+                                            <param id="0" name="Variable">TimerSec</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">60</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="6900388396973207" type="System">
+                                            <param id="0" name="Variable">Timer</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="1011137099967164" type="System">
+                                            <param id="0" name="Variable">TimerSec</param>
+                                            <param id="1" name="Value">60</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="1967427662966492" type="System">
+                                            <param id="0" name="Variable">TimerMins</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="3987475352680031">
                                     <conditions>
                                         <condition id="-6" name="Every X seconds" sid="3182621510740289" type="System">
@@ -1141,31 +1166,6 @@
                                             </actions>
                                         </event-block>
                                     </sub-events>
-                                </event-block>
-                                <event-block sid="6300810491243946">
-                                    <conditions>
-                                        <condition id="-23" name="While" sid="5398117333864005" type="System" />
-                                        <condition id="-14" name="Compare variable" sid="9191716640349312" type="System">
-                                            <param id="0" name="Variable">TimerSec</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">60</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="6900388396973207" type="System">
-                                            <param id="0" name="Variable">Timer</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-11" name="Subtract from" sid="1011137099967164" type="System">
-                                            <param id="0" name="Variable">TimerSec</param>
-                                            <param id="1" name="Value">60</param>
-                                        </action>
-                                        <action id="-10" name="Add to" sid="1967427662966492" type="System">
-                                            <param id="0" name="Variable">TimerMins</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-group>
@@ -1879,7 +1879,28 @@
                                             <param id="0" name="Variable">Paused</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action id="2" name="Set visible" sid="3003766092842137" type="SubmitTimerChange">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="8613333466932869">
+                                            <conditions>
+                                                <condition id="10" name="Is host" sid="623598776862582" type="Multiplayer" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set visible" sid="4112287794574965" type="TimerChange">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="1595426316445594" type="TimerChange">
+                                                    <param id="0" name="Text">&quot;&quot;</param>
+                                                </action>
+                                                <action id="3" name="Set enabled" sid="9693825469127157" type="SubmitTimerChange">
+                                                    <param id="0" name="Mode">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -1904,6 +1925,24 @@
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="8152841028046456">
+                                            <conditions>
+                                                <condition id="10" name="Is host" sid="336432094075975" type="Multiplayer" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="2" name="Set visible" sid="5825180699823732" type="SubmitTimerChange">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="3" name="Set visible" sid="8853690407188302" type="TimerChange">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="3" name="Set enabled" sid="2624042479319906" type="SubmitTimerChange">
+                                                    <param id="0" name="Mode">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -1953,6 +1992,83 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="4931513528841182">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="9165535977123078" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3447676801500427">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="6355062857004741" type="Easter">
+                            <param id="0" name="Text">&quot;nyan&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Open URL in new window" sid="3293389347374829" type="Browser">
+                            <param id="0" name="URL">&quot;https://www.youtube.com/watch?v=QH2-TGUlwu4&quot;</param>
+                            <param id="1" name="Tag">&quot;NYAN&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9959876040342366">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="7881635366403323" type="Easter">
+                            <param id="0" name="Text">&quot;KickallPeers&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6598711217471413">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="2234811184093459" type="System">
+                                    <param id="0" name="Object">Character</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="4958171794286533" type="Character">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">Multiplayer.MyID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="21" name="Kick peer" sid="9537439906324612" type="Multiplayer">
+                                    <param id="0" name="Peer ID">Character.ID</param>
+                                    <param id="1" name="Reason">&quot;Forced Kicked by Host &quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4319768260511295">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="3106229861990342" type="System" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="8509311493696131" type="System" />
+                <action id="-12" name="Set group active" sid="3108904158338217" type="System">
+                    <param id="0" name="Group name">&quot;Peer&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="4311746832851431" type="System">
+                    <param id="0" name="Group name">&quot;Host&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="8019675827219235" type="System">
+                    <param id="0" name="Group name">&quot;Seeker&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="930319405328348" type="System">
+                    <param id="0" name="Variable">Paused</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="3771950729290495" title="Function">
             <sub-events>
                 <event-block sid="2835389937757213">
@@ -2179,82 +2295,58 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="4931513528841182">
+        <event-block sid="2405917094117855">
             <conditions>
-                <condition id="0" name="On key pressed" sid="9165535977123078" type="Keyboard">
-                    <param id="0" name="Key">13 (Return)</param>
-                </condition>
+                <condition id="0" name="On clicked" sid="9297244740080269" type="SubmitTimerChange" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-9" name="Set value" sid="7311109891357082" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Value">TimerChange.Text</param>
+                </action>
+                <action id="-9" name="Set value" sid="8471924882839821" type="System">
+                    <param id="0" name="Variable">TimerSec</param>
+                    <param id="1" name="Value">TimerChange.Text</param>
+                </action>
+            </actions>
             <sub-events>
-                <event-block sid="3447676801500427">
-                    <conditions>
-                        <condition id="0" name="Compare text" sid="6355062857004741" type="Easter">
-                            <param id="0" name="Text">&quot;nyan&quot;</param>
-                            <param id="1" name="Case">0</param>
-                        </condition>
-                    </conditions>
+                <event-block sid="4638075296708781">
+                    <conditions />
                     <actions>
-                        <action id="8" name="Open URL in new window" sid="3293389347374829" type="Browser">
-                            <param id="0" name="URL">&quot;https://www.youtube.com/watch?v=QH2-TGUlwu4&quot;</param>
-                            <param id="1" name="Tag">&quot;NYAN&quot;</param>
+                        <action id="-9" name="Set value" sid="6603552067273222" type="System">
+                            <param id="0" name="Variable">TimerMins</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="9959876040342366">
-                    <conditions>
-                        <condition id="0" name="Compare text" sid="7881635366403323" type="Easter">
-                            <param id="0" name="Text">&quot;KickallPeers&quot;</param>
-                            <param id="1" name="Case">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
                     <sub-events>
-                        <event-block sid="6598711217471413">
+                        <event-block sid="2507813798355454">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="2234811184093459" type="System">
-                                    <param id="0" name="Object">Character</param>
+                                <condition id="-23" name="While" sid="2985324293424533" type="System" />
+                                <condition id="-14" name="Compare variable" sid="2314221141789296" type="System">
+                                    <param id="0" name="Variable">TimerSec</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">60</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="4958171794286533" type="Character">
-                                    <param id="0" name="Instance variable">ID</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">Multiplayer.MyID</param>
+                                <condition id="-14" name="Compare variable" sid="2209798723909553" type="System">
+                                    <param id="0" name="Variable">Timer</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="21" name="Kick peer" sid="9537439906324612" type="Multiplayer">
-                                    <param id="0" name="Peer ID">Character.ID</param>
-                                    <param id="1" name="Reason">&quot;Forced Kicked by Host &quot;</param>
+                                <action id="-11" name="Subtract from" sid="9314005906122551" type="System">
+                                    <param id="0" name="Variable">TimerSec</param>
+                                    <param id="1" name="Value">60</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="373475520051216" type="System">
+                                    <param id="0" name="Variable">TimerMins</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="4319768260511295">
-            <conditions>
-                <condition id="-3" name="On end of layout" sid="3106229861990342" type="System" />
-            </conditions>
-            <actions>
-                <action id="-21" name="Reset global variables" sid="8509311493696131" type="System" />
-                <action id="-12" name="Set group active" sid="3108904158338217" type="System">
-                    <param id="0" name="Group name">&quot;Peer&quot;</param>
-                    <param id="1" name="State">0</param>
-                </action>
-                <action id="-12" name="Set group active" sid="4311746832851431" type="System">
-                    <param id="0" name="Group name">&quot;Host&quot;</param>
-                    <param id="1" name="State">0</param>
-                </action>
-                <action id="-12" name="Set group active" sid="8019675827219235" type="System">
-                    <param id="0" name="Group name">&quot;Seeker&quot;</param>
-                    <param id="1" name="State">0</param>
-                </action>
-                <action id="-9" name="Set value" sid="930319405328348" type="System">
-                    <param id="0" name="Variable">Paused</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
         </event-block>
     </events>
 </c2eventsheet>
