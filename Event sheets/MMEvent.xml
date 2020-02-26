@@ -35,6 +35,24 @@
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="6" name="Set focused" sid="1448421385538739" type="Name" />
+                        <action id="0" name="Play" sid="9854380998289433" type="Audio">
+                            <param id="0" name="Audio file">theme music</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4734919355569553">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="4849485041671742" type="System">
+                            <param id="0" name="Object">EggThing</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="489773108188522" type="EggThing">
+                            <param id="0" name="Angle">random(0, 360)</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -137,6 +155,7 @@
                             <param id="0" name="Variable">Player</param>
                             <param id="1" name="Value">&quot;Seeker&quot;</param>
                         </action>
+                        <action id="33" name="Stop all" sid="350497702338514" type="Audio" />
                         <action id="-2" name="Go to layout" sid="7512082681726627" type="System">
                             <param id="0" name="Layout">Game</param>
                         </action>
@@ -175,6 +194,7 @@
                             <param id="0" name="Variable">Player</param>
                             <param id="1" name="Value">&quot;Hider&quot;</param>
                         </action>
+                        <action id="33" name="Stop all" sid="4616917576371338" type="Audio" />
                         <action id="-2" name="Go to layout" sid="434754995307174" type="System">
                             <param id="0" name="Layout">Game</param>
                         </action>
