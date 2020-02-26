@@ -11,6 +11,7 @@
     <saved-with-version>19000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
@@ -85,6 +86,9 @@
             </object-type>
             <object-type name="Function" sid="7324702549291202">
                 <plugin id="Function" />
+            </object-type>
+            <object-type name="Audio" sid="2625223658405905">
+                <plugin id="Audio" />
             </object-type>
         </object-folder>
         <object-folder name="Text Bars">
@@ -215,24 +219,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="TinyThing" sid="722308801841133">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="ID" sid="1640613871280381" type="string" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Pin" sid="3421674822044702">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4648936395070338" speed="5">
-                        <frame duration="1" hotspotX="0.514286" hotspotY="0.514286">
-                            <image-point name="Imagepoint 1" x="1.42857" y="0.428571" />
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
         </object-folder>
         <object-folder name="Statics">
             <object-type name="HealthBar" sid="1687895632622393">
@@ -329,6 +315,23 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="EggThing" sid="1943857980508372">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="1676982785344083">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4949513891572978" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\nm259002700\Downloads\P.E.W.-PropHunt-Based-Stuff\P.E.W.-PropHunt-Based-Stuff\Files\Props 21.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Whitetext" sid="2929670682997924">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
         </object-folder>
         <object-folder name="Esc Menu">
             <object-type name="Exit" sid="6458022334959414">
@@ -418,7 +421,18 @@
                     </animation>
                 </animation-folder>
                 <animation framecount="1" loop="0" name="Hider" pingpong="0" repeatcount="1" repeatto="0" sid="8164929687313286" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\nm259002700\Downloads\P.E.W.-PropHunt-Based-Stuff\P.E.W.-PropHunt-Based-Stuff\Files\Character1.xcf.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.75" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.8125" y="0.8125" />
+                            <point x="0.5" y="1" />
+                            <point x="0.125" y="0.875" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Prop" pingpong="0" repeatcount="1" repeatto="0" sid="1929321107849661" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -475,19 +489,21 @@
         <object-type name="Text2" sid="2045841418289836">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Sprite3" sid="5824028688005972">
+        <object-type name="TinyThing" sid="666817313424368">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ID" sid="4688797596156447" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="8047177272001077">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7993242635040452" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1176986169945217" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.514286" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="TimerChange" sid="5702711236736458">
-            <plugin id="TextBox" />
-        </object-type>
-        <object-type name="SubmitTimerChange" sid="8349428916824986">
-            <plugin id="Button" />
         </object-type>
     </object-folder>
     <families>
@@ -514,8 +530,27 @@
         <global-instance type="Mouse" uid="4" />
         <global-instance type="Function" uid="8" />
         <global-instance type="Browser" uid="59" />
+        <global-instance type="Audio" uid="170">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="theme music.m4a" />
+        <file name="theme music.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
