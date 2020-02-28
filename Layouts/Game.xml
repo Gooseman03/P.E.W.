@@ -1603,6 +1603,7 @@
                         <Role>0</Role>
                         <MouseX>0</MouseX>
                         <MouseY>0</MouseY>
+                        <healthSet>false</healthSet>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
@@ -3734,6 +3735,30 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="Exit" uid="153">
+                    <properties>
+                        <type>Button</type>
+                        <text>Exit to main menu</text>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>800</x>
+                        <y>608</y>
+                        <z>0</z>
+                        <width>288</width>
+                        <height>48</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
                 <instance type="DeathText" uid="10">
                     <properties>
                         <text>Text</text>
@@ -3856,6 +3881,32 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
+                <instance type="TimerChange" uid="137">
+                    <properties>
+                        <text></text>
+                        <placeholder>Timer Change Value</placeholder>
+                        <tooltip></tooltip>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <read-only>No</read-only>
+                        <spell-check>No</spell-check>
+                        <type>Number</type>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>48</x>
+                        <y>32</y>
+                        <z>0</z>
+                        <width>176</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
                 <instance type="Exit" uid="135">
                     <properties>
                         <type>Button</type>
@@ -3880,38 +3931,12 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="TimerChange" uid="137">
-                    <properties>
-                        <text></text>
-                        <placeholder>Timer Change Value</placeholder>
-                        <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <read-only>No</read-only>
-                        <spell-check>No</spell-check>
-                        <type>Number</type>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>48</x>
-                        <y>32</y>
-                        <z>0</z>
-                        <width>176</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
                 <instance type="SubmitTimerChange" uid="138">
                     <properties>
                         <type>Button</type>
                         <text>Submit</text>
                         <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <enabled>Yes</enabled>
                         <auto-font-size>Yes</auto-font-size>
                         <id-optional></id-optional>
