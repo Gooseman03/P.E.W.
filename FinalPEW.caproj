@@ -566,5 +566,6 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file-folder name="Music" />
     </files-folder>
 </c2project>
