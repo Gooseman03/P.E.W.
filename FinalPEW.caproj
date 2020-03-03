@@ -420,7 +420,18 @@
                     </animation>
                 </animation-folder>
                 <animation framecount="1" loop="0" name="Hider" pingpong="0" repeatcount="1" repeatto="0" sid="8164929687313286" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\nm259002700\Downloads\P.E.W.-PropHunt-Based-Stuff\P.E.W.-PropHunt-Based-Stuff\Files\Character1.xcf2.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.75" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="0.8125" y="0.8125" />
+                            <point x="0.5" y="1" />
+                            <point x="0.125" y="0.875" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Prop" pingpong="0" repeatcount="1" repeatto="0" sid="1929321107849661" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -474,17 +485,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Text2" sid="2045841418289836">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Sprite3" sid="5824028688005972">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7993242635040452" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="TimerChange" sid="5702711236736458">
             <plugin id="TextBox" />
         </object-type>
@@ -510,6 +510,12 @@
         <object-type name="Entrance" sid="652343852514247">
             <plugin id="Button" />
         </object-type>
+        <object-type name="SeekSpeed" sid="1888459996023231">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="HideSpeed" sid="9490587044659146">
+            <plugin id="TextBox" />
+        </object-type>
     </object-folder>
     <families>
         <family name="PauseMenuButtons" plugin-id="Button" sid="4718393179097669">
@@ -522,10 +528,8 @@
     <layout-folder>
         <layout>MainMenu.xml</layout>
         <layout>Game.xml</layout>
-        <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>GameSheet.xml</event-sheet>
         <event-sheet>MMEvent.xml</event-sheet>
     </event-folder>
