@@ -17,6 +17,8 @@
         <variable constant="0" name="Timer" sid="5802275552955822" static="0" type="number">300</variable>
         <variable constant="0" name="Paused" sid="6000174311462584" static="0" type="number">0</variable>
         <variable constant="0" name="PropDel" sid="513324661520692" static="0" type="number">0</variable>
+        <variable constant="0" name="HideAmount" sid="7853020462402089" static="0" type="number">0</variable>
+        <variable constant="0" name="SeekAmount" sid="310410265822177" static="0" type="number">0</variable>
         <event-block sid="6006889432655459">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="2265746474827073" type="System" />
@@ -295,6 +297,10 @@
                                     <param id="0" name="Animation">&quot;Seeker&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-10" name="Add to" sid="3459892825096085" type="System">
+                                    <param id="0" name="Variable">SeekAmount</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="6" name="Set speed" sid="1965312020776511" type="Character">
                                     <param id="0" name="Speed">0</param>
                                 </action>
@@ -343,6 +349,10 @@
                                 <action id="4" name="Set animation" sid="6694992016497172" type="Character">
                                     <param id="0" name="Animation">&quot;Hider&quot;</param>
                                     <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="3084326851618419" type="System">
+                                    <param id="0" name="Variable">HideAmount</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                                 <action behavior="ScrollTo" id="1" name="Set enabled" sid="2053495489032423" type="Character">
                                     <param id="0" name="State">1</param>
@@ -462,6 +472,28 @@
                                                     <param id="1" name="State">1</param>
                                                 </action>
                                             </actions>
+                                        </event-block>
+                                        <event-block sid="3638215386114903">
+                                            <conditions>
+                                                <condition id="20" name="Compare peer count" sid="7947674564207688" type="Multiplayer">
+                                                    <param id="0" name="Comparison">5</param>
+                                                    <param id="1" name="Count">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="3347532561434632">
+                                                    <conditions>
+                                                        <condition id="-4" name="Trigger once while true" sid="4444691786638419" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-12" name="Set group active" sid="6073577145333465" type="System">
+                                                            <param id="0" name="Group name">&quot;WinCon&quot;</param>
+                                                            <param id="1" name="State">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -584,6 +616,25 @@
                                                         <action behavior="Pin" id="0" name="Pin to object" sid="7472436061518713" type="TinyThing">
                                                             <param id="0" name="Pin to">Character</param>
                                                             <param id="1" name="Mode">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Add to" sid="9032580509364373" type="System">
+                                                            <param id="0" name="Variable">SeekAmount</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="1192582222252399">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="6722638596569776" type="System">
+                                                            <param id="0" name="First value">Multiplayer.Message</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">&quot;Hider&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="6994936983665297" type="System">
+                                                            <param id="0" name="Variable">HideAmount</param>
+                                                            <param id="1" name="Value">1</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -1222,6 +1273,91 @@
                                             </actions>
                                         </event-block>
                                     </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" inactive="1" sid="2641680377843844" title="WinCon">
+                            <sub-events>
+                                <variable constant="0" name="WYN" sid="8933665204535369" static="0" type="number">0</variable>
+                                <event-block sid="2758691885307974">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5069177683406274" type="System">
+                                            <param id="0" name="Variable">HideAmount</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-6" name="Every X seconds" sid="3324312716791515" type="System">
+                                            <param id="0" name="Interval (seconds)">10</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="261106798023043" type="System">
+                                            <param id="0" name="Variable">WYN</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="9177718762690049" type="System">
+                                            <param id="0" name="Variable">WYN</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="3805784104727816" type="WinState">
+                                            <param id="0" name="Text">&quot;Seekers Win!&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="7798123396833861" type="WinState">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8847681950917466">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="6926792201410021" type="System">
+                                            <param id="0" name="Variable">SeekAmount</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-6" name="Every X seconds" sid="2504508885708516" type="System">
+                                            <param id="0" name="Interval (seconds)">10</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="561668839672462" type="System">
+                                            <param id="0" name="Variable">WYN</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="6478361292688691" type="System">
+                                            <param id="0" name="Variable">WYN</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="550790547297477" type="WinState">
+                                            <param id="0" name="Text">&quot;Hiders Win!&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="4984189841304946" type="WinState">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="765211984929708">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="3309890247231194" type="System">
+                                            <param id="0" name="Variable">Timer</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="7679363327217589" type="System">
+                                            <param id="0" name="Variable">WYN</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="3741474680882314" type="WinState">
+                                            <param id="0" name="Text">&quot;Hiders Win!&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8151004326671819" type="WinState">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
                         </event-group>
@@ -2120,6 +2256,24 @@
             </conditions>
             <actions>
                 <action id="-21" name="Reset global variables" sid="8509311493696131" type="System" />
+                <action id="-32" name="Set layer effect parameter" sid="526887372488015" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
+                    <param id="2" name="Parameter index">1</param>
+                    <param id="3" name="Value">0</param>
+                </action>
+                <action id="-32" name="Set layer effect parameter" sid="7133967885676149" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
+                    <param id="2" name="Parameter index">1</param>
+                    <param id="3" name="Value">0</param>
+                </action>
+                <action id="-32" name="Set layer effect parameter" sid="3392449304968878" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
+                    <param id="2" name="Parameter index">1</param>
+                    <param id="3" name="Value">0</param>
+                </action>
                 <action id="3" name="Set enabled" sid="4443542969646413" type="Exit">
                     <param id="0" name="Mode">0</param>
                 </action>

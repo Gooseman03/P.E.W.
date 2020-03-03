@@ -3717,6 +3717,33 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="WinState" uid="11">
+                    <properties>
+                        <text>text</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Impact,-48,700,0</font>
+                        <color>0,0,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>752</x>
+                        <y>464</y>
+                        <z>0</z>
+                        <width>400</width>
+                        <height>144</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
