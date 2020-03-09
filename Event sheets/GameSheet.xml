@@ -135,17 +135,6 @@
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="8131582406067949">
-                    <conditions>
-                        <condition id="-4" name="Trigger once while true" sid="3006261872747249" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="5927462009771642" type="Function">
-                            <param id="0" name="Name">&quot;PropGen&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="7402381242744461">
                     <conditions>
                         <condition id="-23" name="While" sid="9296195430224646" type="System" />
@@ -278,6 +267,15 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="8131582406067949">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="5927462009771642" type="Function">
+                                    <param id="0" name="Name">&quot;PropGen&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="9600665209532838">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="301259158700035" type="System">
@@ -390,7 +388,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" sid="860219586968921" title="PropRandomizer">
+        <event-group description="" inactive="1" sid="860219586968921" title="PropRandomizer">
             <sub-events>
                 <variable constant="0" name="I" sid="7808148856099631" static="0" type="number">0</variable>
                 <event-block sid="1424916661738865">
@@ -2120,6 +2118,24 @@
             </conditions>
             <actions>
                 <action id="-21" name="Reset global variables" sid="8509311493696131" type="System" />
+                <action id="-32" name="Set layer effect parameter" sid="5697164767230543" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
+                    <param id="2" name="Parameter index">1</param>
+                    <param id="3" name="Value">0</param>
+                </action>
+                <action id="-32" name="Set layer effect parameter" sid="6828681818737329" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
+                    <param id="2" name="Parameter index">1</param>
+                    <param id="3" name="Value">0</param>
+                </action>
+                <action id="-32" name="Set layer effect parameter" sid="2237961858682888" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
+                    <param id="2" name="Parameter index">1</param>
+                    <param id="3" name="Value">0</param>
+                </action>
                 <action id="3" name="Set enabled" sid="4443542969646413" type="Exit">
                     <param id="0" name="Mode">0</param>
                 </action>
@@ -2137,6 +2153,10 @@
                 </action>
                 <action id="-12" name="Set group active" sid="8019675827219235" type="System">
                     <param id="0" name="Group name">&quot;Seeker&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-12" name="Set group active" sid="9625459279443815" type="System">
+                    <param id="0" name="Group name">&quot;PropRandomizer&quot;</param>
                     <param id="1" name="State">0</param>
                 </action>
                 <action id="-9" name="Set value" sid="930319405328348" type="System">
@@ -2266,25 +2286,72 @@
                             <param id="1" name="Duration">0.4</param>
                             <param id="2" name="Mode">0</param>
                         </action>
-                        <action id="-32" name="Set layer effect parameter" sid="4207334156906989" type="System">
-                            <param id="0" name="Layer">1</param>
-                            <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
-                            <param id="2" name="Parameter index">1</param>
-                            <param id="3" name="Value">CurrentBlur+50</param>
-                        </action>
-                        <action id="-32" name="Set layer effect parameter" sid="6040859323101907" type="System">
-                            <param id="0" name="Layer">2</param>
-                            <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
-                            <param id="2" name="Parameter index">1</param>
-                            <param id="3" name="Value">CurrentBlur+50</param>
-                        </action>
-                        <action id="-32" name="Set layer effect parameter" sid="200930009582455" type="System">
-                            <param id="0" name="Layer">3</param>
-                            <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
-                            <param id="2" name="Parameter index">1</param>
-                            <param id="3" name="Value">CurrentBlur+50</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="9641050167598382">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1678847632389506" type="System">
+                                    <param id="0" name="Variable">Player</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Seeker&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8637190052485376" type="System">
+                                    <param id="0" name="Variable">CurrentBlur</param>
+                                    <param id="1" name="Value">CurrentBlur+(StartingHealth / MaxBlur)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8588508240687175">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7822514803786085" type="System">
+                                    <param id="0" name="Variable">Player</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Hider&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1757067320102528" type="System">
+                                    <param id="0" name="Variable">CurrentBlur</param>
+                                    <param id="1" name="Value">CurrentBlur+(HiderStartingHp / MaxBlur)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7972912617667749">
+                            <conditions />
+                            <actions>
+                                <action id="-32" name="Set layer effect parameter" sid="4207334156906989" type="System">
+                                    <param id="0" name="Layer">1</param>
+                                    <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
+                                    <param id="2" name="Parameter index">1</param>
+                                    <param id="3" name="Value">CurrentBlur</param>
+                                </action>
+                                <action id="-32" name="Set layer effect parameter" sid="6040859323101907" type="System">
+                                    <param id="0" name="Layer">2</param>
+                                    <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
+                                    <param id="2" name="Parameter index">1</param>
+                                    <param id="3" name="Value">CurrentBlur</param>
+                                </action>
+                                <action id="-32" name="Set layer effect parameter" sid="200930009582455" type="System">
+                                    <param id="0" name="Layer">3</param>
+                                    <param id="1" name="Effect">&quot;RadialBlur&quot;</param>
+                                    <param id="2" name="Parameter index">1</param>
+                                    <param id="3" name="Value">CurrentBlur</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="823823337697798">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2818835603438065" type="System">
+                                    <param id="0" name="Variable">Player</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="1738059103382374">
                     <conditions>
@@ -2377,6 +2444,17 @@
                                     <param id="3" name="Y">random(200,5000)</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="847243692610991">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-12" name="Set group active" sid="7705022716157416" type="System">
+                                            <param id="0" name="Group name">&quot;PropRandomizer&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

@@ -320,6 +320,58 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="SeekSpeed" uid="155">
+                    <properties>
+                        <text>400</text>
+                        <placeholder>SeekSpeed</placeholder>
+                        <tooltip></tooltip>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <read-only>No</read-only>
+                        <spell-check>No</spell-check>
+                        <type>Number</type>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>184</x>
+                        <y>372</y>
+                        <z>0</z>
+                        <width>88</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="HideSpeed" uid="156">
+                    <properties>
+                        <text>350</text>
+                        <placeholder>HideSpeed</placeholder>
+                        <tooltip></tooltip>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <read-only>No</read-only>
+                        <spell-check>No</spell-check>
+                        <type>Text</type>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>800</x>
+                        <y>374</y>
+                        <z>0</z>
+                        <width>88</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
                 <instance type="MainTxt" uid="1">
                     <properties>
                         <text>P.E.W.</text>
